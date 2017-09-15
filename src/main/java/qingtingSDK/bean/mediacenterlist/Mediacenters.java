@@ -15,7 +15,16 @@ public class Mediacenters {
     private String result;
     private String slidereplay;
     private String test_path;
+    private String type;
     private int weight;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getAccess() {
         return access;

@@ -1,9 +1,4 @@
-package qingtingSDK.bean.category;
-
-import qingtingSDK.bean.Author_Podcaster;
-import qingtingSDK.bean.BaseResult;
-import qingtingSDK.bean.MediaInfo;
-import qingtingSDK.bean.Thumbs;
+package qingtingSDK.bean;
 
 import java.util.List;
 
@@ -12,6 +7,16 @@ import java.util.List;
  */
 public class Channel extends BaseResult {
     private List<ChannelDate> date;
+// 分类下电台总数目
+    private int total;
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
 
     public List<ChannelDate> getDate() {
         return date;
@@ -21,22 +26,25 @@ public class Channel extends BaseResult {
         this.date = date;
     }
 
+    /**
+     * 详细电台详细（包括 点播与直播）
+     */
     static class ChannelDate {
         private int id;
         private String title;
         private String description;
         private String update_time;
-        private Thumbs thumbs;
         private String chatgroup_id;
+        private Thumbs thumbs;
+        private String type;
+        private String auto_paly;
         private String freq;
         private int audience_count;
         private MediaInfo mediaInfo;
         private int category_id;
-        private String type;
-        private String auto_paly;
         private String record_enabled;
         private String latest_program;
-        private Author_Podcaster detail;
+        private List<Author_Podcaster> detail;
 
         public String getType() {
             return type;
@@ -150,11 +158,11 @@ public class Channel extends BaseResult {
             this.latest_program = latest_program;
         }
 
-        public Author_Podcaster getDetail() {
+        public List<Author_Podcaster> getDetail() {
             return detail;
         }
 
-        public void setDetail(Author_Podcaster detail) {
+        public void setDetail(List<Author_Podcaster> detail) {
             this.detail = detail;
         }
     }

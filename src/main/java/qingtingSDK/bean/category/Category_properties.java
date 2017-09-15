@@ -4,21 +4,28 @@ import qingtingSDK.bean.BaseResult;
 
 import java.util.List;
 
+/**
+ * 分类属性
+ */
 public class Category_properties extends BaseResult{
-    private Category_properties_id data;
+    private List<Data> data;
 
-    public Category_properties_id getData() {
+    public List<Data> getData() {
         return data;
     }
 
-    public void setData(Category_properties_id data) {
+    public void setData(List<Data> data) {
         this.data = data;
     }
 
-    static class Category_properties_id{
+    /**
+     * 属性
+     */
+    static class Values {
         private int id;
         private String name;
-        private List<Value> values;
+        // 属性序号
+        private String sequence;
 
         public int getId() {
             return id;
@@ -36,41 +43,45 @@ public class Category_properties extends BaseResult{
             this.name = name;
         }
 
-        public List<Value> getValues() {
-            return values;
-        }
-
-        public void setValues(List<Value> values) {
-            this.values = values;
-        }
-    }
-    static class Value{
-        private int id;
-        private String name;
-        private int sequence;
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public int getSequence() {
+        public String getSequence() {
             return sequence;
         }
 
-        public void setSequence(int sequence) {
+        public void setSequence(String sequence) {
             this.sequence = sequence;
+        }
+    }
+
+    /**
+     * 属性种类
+     */
+    static class Data{
+        private int id;
+        private String name;
+        private List<Values> values;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public List<Values> getValues() {
+            return values;
+        }
+
+        public void setValues(List<Values> values) {
+            this.values = values;
         }
     }
 }
