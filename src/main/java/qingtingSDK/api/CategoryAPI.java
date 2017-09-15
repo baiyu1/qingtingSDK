@@ -47,12 +47,28 @@ public class CategoryAPI {
                 .build();
         return LocalHttpClient.executeJsonResponse(request,Category_properties.class);
     }
+
+    /**
+     * 获取分类下的所有电台
+     * @param access_token
+     * @param category_id
+     * @param curpage
+     * @return
+     */
     public Channel getChannel(String access_token,int category_id,int curpage){
         HttpUriRequest request=RequestBuilder.get()
                 .setUri(BaseAPI.BaseURL+"v6/media/categories/"+category_id+"/channels/order/0/"+curpage+"/pagesize/30")
                 .addParameter("access_token",access_token)
                 .build();
-        return null;
+        return LocalHttpClient.executeJsonResponse(request,Channel.class);
+    }
+    public Channel getChannel(String access_token,String curpage,String category_id ,int[] attr){
+        HttpUriRequest request=RequestBuilder.get()
+                .setUri(BaseAPI.BaseURL+"/v6/media/categories/"+category_id
+                        +"/channels/order/0/attr/#{attr_id_1}/#{attr_id_2}/.../curpage/"+curpage+"/pagesize/30")
+                .addParameter("access_token",access_token)
+                .build();
+        return LocalHttpClient.executeJsonResponse(request,Channel.class);
     }
 
 }

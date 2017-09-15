@@ -1,137 +1,161 @@
 package qingtingSDK.bean.category;
 
 import qingtingSDK.bean.Author_Podcaster;
+import qingtingSDK.bean.BaseResult;
 import qingtingSDK.bean.MediaInfo;
 import qingtingSDK.bean.Thumbs;
+
+import java.util.List;
 
 /**
  * 电台
  */
-public class Channel {
-    private int id;
-    private String title;
-    private String description;
-    private String update_time;
-    private Thumbs thumbs;
-    private String chatgroup_id;
-    private String freq;
-    private int audience_count;
-    private MediaInfo mediaInfo;
-    private int category_id;
-    private String auto_paly;
-    private String record_enabled;
-    private String latest_program;
-    private Author_Podcaster detail;
+public class Channel extends BaseResult {
+    private List<ChannelDate> date;
 
-    public String getChatgroup_id() {
-        return chatgroup_id;
+    public List<ChannelDate> getDate() {
+        return date;
     }
 
-    public void setChatgroup_id(String chatgroup_id) {
-        this.chatgroup_id = chatgroup_id;
+    public void setDate(List<ChannelDate> date) {
+        this.date = date;
     }
 
-    public String getFreq() {
-        return freq;
-    }
+    static class ChannelDate {
+        private int id;
+        private String title;
+        private String description;
+        private String update_time;
+        private Thumbs thumbs;
+        private String chatgroup_id;
+        private String freq;
+        private int audience_count;
+        private MediaInfo mediaInfo;
+        private int category_id;
+        private String type;
+        private String auto_paly;
+        private String record_enabled;
+        private String latest_program;
+        private Author_Podcaster detail;
 
-    public void setFreq(String freq) {
-        this.freq = freq;
-    }
+        public String getType() {
+            return type;
+        }
 
-    public int getAudience_count() {
-        return audience_count;
-    }
+        public void setType(String type) {
+            this.type = type;
+        }
 
-    public void setAudience_count(int audience_count) {
-        this.audience_count = audience_count;
-    }
+        public String getChatgroup_id() {
+            return chatgroup_id;
+        }
 
-    public MediaInfo getMediaInfo() {
-        return mediaInfo;
-    }
+        public void setChatgroup_id(String chatgroup_id) {
+            this.chatgroup_id = chatgroup_id;
+        }
 
-    public void setMediaInfo(MediaInfo mediaInfo) {
-        this.mediaInfo = mediaInfo;
-    }
+        public String getFreq() {
+            return freq;
+        }
 
-    public int getId() {
-        return id;
-    }
+        public void setFreq(String freq) {
+            this.freq = freq;
+        }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+        public int getAudience_count() {
+            return audience_count;
+        }
 
-    public String getTitle() {
-        return title;
-    }
+        public void setAudience_count(int audience_count) {
+            this.audience_count = audience_count;
+        }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+        public MediaInfo getMediaInfo() {
+            return mediaInfo;
+        }
 
-    public String getDescription() {
-        return description;
-    }
+        public void setMediaInfo(MediaInfo mediaInfo) {
+            this.mediaInfo = mediaInfo;
+        }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+        public int getId() {
+            return id;
+        }
 
-    public String getUpdate_time() {
-        return update_time;
-    }
+        public void setId(int id) {
+            this.id = id;
+        }
 
-    public void setUpdate_time(String update_time) {
-        this.update_time = update_time;
-    }
+        public String getTitle() {
+            return title;
+        }
 
-    public Thumbs getThumbs() {
-        return thumbs;
-    }
+        public void setTitle(String title) {
+            this.title = title;
+        }
 
-    public void setThumbs(Thumbs thumbs) {
-        this.thumbs = thumbs;
-    }
+        public String getDescription() {
+            return description;
+        }
 
-    public int getCategory_id() {
-        return category_id;
-    }
+        public void setDescription(String description) {
+            this.description = description;
+        }
 
-    public void setCategory_id(int category_id) {
-        this.category_id = category_id;
-    }
+        public String getUpdate_time() {
+            return update_time;
+        }
 
-    public String getAuto_paly() {
-        return auto_paly;
-    }
+        public void setUpdate_time(String update_time) {
+            this.update_time = update_time;
+        }
 
-    public void setAuto_paly(String auto_paly) {
-        this.auto_paly = auto_paly;
-    }
+        public Thumbs getThumbs() {
+            return thumbs;
+        }
 
-    public String getRecord_enabled() {
-        return record_enabled;
-    }
+        public void setThumbs(Thumbs thumbs) {
+            this.thumbs = thumbs;
+        }
 
-    public void setRecord_enabled(String record_enabled) {
-        this.record_enabled = record_enabled;
-    }
+        public int getCategory_id() {
+            return category_id;
+        }
 
-    public String getLatest_program() {
-        return latest_program;
-    }
+        public void setCategory_id(int category_id) {
+            this.category_id = category_id;
+        }
 
-    public void setLatest_program(String latest_program) {
-        this.latest_program = latest_program;
-    }
+        public String getAuto_paly() {
+            return auto_paly;
+        }
 
-    public Author_Podcaster getDetail() {
-        return detail;
-    }
+        public void setAuto_paly(String auto_paly) {
+            this.auto_paly = auto_paly;
+        }
 
-    public void setDetail(Author_Podcaster detail) {
-        this.detail = detail;
+        public String getRecord_enabled() {
+            return record_enabled;
+        }
+
+        public void setRecord_enabled(String record_enabled) {
+            this.record_enabled = record_enabled;
+        }
+
+        public String getLatest_program() {
+            return latest_program;
+        }
+
+        public void setLatest_program(String latest_program) {
+            this.latest_program = latest_program;
+        }
+
+        public Author_Podcaster getDetail() {
+            return detail;
+        }
+
+        public void setDetail(Author_Podcaster detail) {
+            this.detail = detail;
+        }
     }
 }
