@@ -2,7 +2,7 @@ package qingtingSDK.bean.token;
 
 import qingtingSDK.bean.BaseResult;
 
-public class Token extends BaseResult{
+public class Token extends BaseResult {
     private String access_token;
     private String token_type;
     private int expires_in;

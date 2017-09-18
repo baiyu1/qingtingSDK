@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 分类属性
  */
-public class Category_properties extends BaseResult{
+public class Category_properties extends BaseResult {
     private List<Data> data;
 
     public List<Data> getData() {
@@ -55,7 +55,7 @@ public class Category_properties extends BaseResult{
     /**
      * 属性种类
      */
-    static class Data{
+    static class Data {
         private int id;
         private String name;
         private List<Values> values;

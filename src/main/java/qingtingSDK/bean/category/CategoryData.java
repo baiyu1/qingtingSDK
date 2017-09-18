@@ -4,7 +4,10 @@ import qingtingSDK.bean.BaseResult;
 
 import java.util.List;
 
-public class CategoryData extends BaseResult{
+/**
+ * 分类属性集合
+ */
+public class CategoryData extends BaseResult {
     private List<Category> categories;
 
     public List<Category> getCategories() {

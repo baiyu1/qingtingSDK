@@ -2,8 +2,7 @@ package qingtingSDK.api;
 
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
-import qingtingSDK.bean.Channel;
-import qingtingSDK.bean.onDemand.OnDemandProgram;
+import qingtingSDK.bean.Program.OnDemandProgramData;
 import qingtingSDK.client.LocalHttpClient;
 
 /**
@@ -31,13 +30,13 @@ public class OnDemandAPI {
      * @param curpage_id
      * @return
      */
-    public OnDemandProgram getProgramList(String access_token,String channel_id,int curpage_id){
+    public OnDemandProgramData getProgramList(String access_token, String channel_id, int curpage_id){
         HttpUriRequest request= RequestBuilder.get()
                 .setUri("v6/media/channelondemands/"+channel_id+"/programs/curpage/ "
                         +curpage_id+"/pagesize/30" )
                 .addParameter("access_token",access_token)
                 .build();
-        return LocalHttpClient.executeJsonResponse(request,OnDemandProgram.class);
+        return LocalHttpClient.executeJsonResponse(request,OnDemandProgramData.class);
 
     }
 
@@ -47,12 +46,12 @@ public class OnDemandAPI {
      * @param program_id
      * @return
      */
-    public OnDemandProgram getProgram(String access_token,int program_id){
+    public OnDemandProgramData getProgram(String access_token, int program_id){
         HttpUriRequest request= RequestBuilder.get()
                 .setUri(BaseAPI.BaseURL+"/v6/media/programs/"+program_id)
                 .addParameter("access_token",access_token)
                 .build();
-        return LocalHttpClient.executeJsonResponse(request,OnDemandProgram.class);
+        return LocalHttpClient.executeJsonResponse(request,OnDemandProgramData.class);
     }
 
 

@@ -1,10 +1,18 @@
 package qingtingSDK.bean.category;
 
+/**
+ * 分类信息
+ */
 public class Category {
+    //    分类id
     private int id;
+    //    分类名字
     private String name;
+    //    分类优先级序号
     private int sequence;
+    //    推荐内容的section id
     private int section_id;
+    //    数据类型
     private String type;
 
     public int getId() {

@@ -2,7 +2,7 @@ package qingtingSDK.bean.mediacenterlist;
 
 import qingtingSDK.bean.BaseResult;
 
-public class MediaCenterList extends BaseResult{
+public class MediaCenterList extends BaseResult {
     private Radiostations radiostations_download;
     private Radiostations radiostations_hls;
     private Radiostations radiostations_hls_https;

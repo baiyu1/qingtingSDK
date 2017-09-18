@@ -8,7 +8,7 @@ import qingtingSDK.bean.token.Token;
 import qingtingSDK.client.LocalHttpClient;
 
 /**
- *
+ * 获取通行证
  */
 public class TokenAPI {
     /**

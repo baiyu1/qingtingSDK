@@ -32,7 +32,7 @@ public class MediaInfo {
         this.bitrates_url = bitrates_url;
     }
 
-    static class Bitrates_url{
+    static class Bitrates_url {
         private int bitrate;
         private String file_path;
 

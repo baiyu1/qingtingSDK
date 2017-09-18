@@ -1,7 +1,7 @@
 package qingtingSDK.bean;
 
 /**
- * 作者信息
+ * 主播 or 作者信息
  */
 public class Author_Podcaster {
     private int id;

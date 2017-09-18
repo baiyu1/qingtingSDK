@@ -1,4 +1,4 @@
-package qingtingSDK.bean.live;
+package qingtingSDK.bean.Program;
 
 import qingtingSDK.bean.Author_Podcaster;
 import qingtingSDK.bean.BaseResult;
@@ -8,28 +8,32 @@ import qingtingSDK.bean.Thumbs;
 import java.util.List;
 
 /**
- * 直播节目
+ * 点播节目
  */
-public class LiveProgram extends BaseResult{
-    private LiveProgramData data;
+public class OnDemandProgramData extends BaseResult {
+    private OnDemandProgram data;
 
-    public LiveProgramData getData() {
+    public OnDemandProgram getData() {
         return data;
     }
 
-    public void setData(LiveProgramData data) {
+    public void setData(OnDemandProgram data) {
         this.data = data;
     }
 
-    static class LiveProgramData {
+
+
+    static class OnDemandProgram {
         private int id;
-        private String start_time;
-        private String end_time;
         private String title;
+        private Thumbs thumbs;
+        private String description;
+        private String updata_time;
         private float duration;
         private String type;
         private String chatgroup_id;
         private MediaInfo mediainfo;
+        private int sequence;
         private List<Author_Podcaster> detail;
 
         public int getId() {
@@ -40,28 +44,36 @@ public class LiveProgram extends BaseResult{
             this.id = id;
         }
 
-        public String getStart_time() {
-            return start_time;
-        }
-
-        public void setStart_time(String start_time) {
-            this.start_time = start_time;
-        }
-
-        public String getEnd_time() {
-            return end_time;
-        }
-
-        public void setEnd_time(String end_time) {
-            this.end_time = end_time;
-        }
-
         public String getTitle() {
             return title;
         }
 
         public void setTitle(String title) {
             this.title = title;
+        }
+
+        public Thumbs getThumbs() {
+            return thumbs;
+        }
+
+        public void setThumbs(Thumbs thumbs) {
+            this.thumbs = thumbs;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public String getUpdata_time() {
+            return updata_time;
+        }
+
+        public void setUpdata_time(String updata_time) {
+            this.updata_time = updata_time;
         }
 
         public float getDuration() {
@@ -96,6 +108,14 @@ public class LiveProgram extends BaseResult{
             this.mediainfo = mediainfo;
         }
 
+        public int getSequence() {
+            return sequence;
+        }
+
+        public void setSequence(int sequence) {
+            this.sequence = sequence;
+        }
+
         public List<Author_Podcaster> getDetail() {
             return detail;
         }
@@ -104,4 +124,5 @@ public class LiveProgram extends BaseResult{
             this.detail = detail;
         }
     }
+
 }

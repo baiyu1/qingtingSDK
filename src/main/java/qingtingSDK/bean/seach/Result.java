@@ -6,11 +6,13 @@ import java.util.List;
 
 public class Result extends BaseResult {
     private List<ResultData> data;
-    static class ResultData{
+
+    static class ResultData {
         private String groupVlaue;
         private Doclist doclist;
     }
-    static class Doclist{
+
+    static class Doclist {
         private Channel_live channel_live;
         private Channel_ondemand channel_ondemand;
         private Program_live program_live;
